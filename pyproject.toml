@@ -1,0 +1,32 @@
+[project]
+name = "langshark"
+version = "0.1.2"
+description = "Textual TUI for inspecting LangGraph threads and checkpoints"
+readme = "README.md"
+authors = [
+    { name = "Martin Stokoe", email = "martin@stokoe.net" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "textual>=8.2.8",
+    "langgraph-sdk>=0.1.0",
+]
+
+[project.scripts]
+langshark = "langshark.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.9.18,<0.10.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "ruff>=0.16.0",
+    "textual-dev>=1.6.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
