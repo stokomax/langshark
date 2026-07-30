@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# Dev-specific additions
+.uv/
+.clinerules/
+memory-bank/
